@@ -2,14 +2,14 @@
 
 This is the script that downloads Canadian Geographic data for you to use.
 
-For the latest Canadian Geo*Data release notes, please visit: 
+For the latest Canadian Geo*Data release notes, please visit:
 - https://releasenotes.melissa.com/reference-data/canadian-geo-data/
 
 
 ## Tested Environments
 - Windows 64-bit .NET Runtimes 7.0, Powershell 5.1
 - Ubuntu Linux 20.04.04 LTS 64-bit .NET 7.0
-- Canadian Geo*Data for 2024-Q3
+- Canadian Geo*Data for 2024-Q4
 
 ## Getting started
 
@@ -17,35 +17,35 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Download this project
 ```
-$ git clone https://github.com/MelissaData/CanadianGeoData-Downloader
-$ cd CanadianGeoData-Downloader
+git clone https://github.com/MelissaData/CanadianGeoData-Downloader
+cd CanadianGeoData-Downloader
 ```
 
 ### Set up Melissa Updater
 
 Melissa Updater is a CLI application allowing the user to update their Melissa applications/data.
-- Download Melissa Updater here: 
-	
+- Download Melissa Updater here:
+
 	- Windows: <https://releases.melissadata.net/Download/Library/WINDOWS/NET/ANY/latest/MelissaUpdater.exe>
 	- Linux: <https://releases.melissadata.net/Download/Library/LINUX/NET/ANY/latest/MelissaUpdater>
 
-- Put `MelissaUpdater.exe` or `MelissaUpdater` in the `MelissaUpdater` folder 
-- For more information about the Melissa Updater, please visit: https://www.melissa.com/quickstart-guides/melissa-releases-web-service# 
+- Put `MelissaUpdater.exe` or `MelissaUpdater` in the `MelissaUpdater` folder
+- For more information about the Melissa Updater, please visit: https://www.melissa.com/quickstart-guides/melissa-releases-web-service#
 
 ## Windows
 
 #### Set up Powershell settings
 
 If running Powershell for the first time, you will need to run this command in the Powershell console: `Set-ExecutionPolicy RemoteSigned`.
-The console will then prompt you with the following warning shown in the image below. 
- - Enter `'A'`. 
+The console will then prompt you with the following warning shown in the image below.
+ - Enter `'A'`.
  	- If successful, the console will not output any messages. (You may need to run Powershell as administrator to enforce this setting).
-	
+
  ![alt text](/screenshots/powershell_executionpolicy.png)
 
 #### Set License
 
-You will need to set your license before running the `CanadianGeoData_Downloader.ps1`. 
+You will need to set your license before running the `CanadianGeoData_Downloader.ps1`.
 You can check the powershell script for '$license = "your_license"' and change the variable value to your license string.
 
 ```
@@ -58,14 +58,14 @@ $license            = "your_license"
 Once you have finished all the set up, let's run the script:
 
 ```
-$ .\CanadianGeoData_Downloader.ps1
+.\CanadianGeoData_Downloader.ps1
 ```
 
 ## Linux
 
 #### Set License
 
-You will need to set your license before running the `CanadianGeoData_Downloader.sh`. 
+You will need to set your license before running the `CanadianGeoData_Downloader.sh`.
 You can check the bash script for 'license="your_license"' and change the variable value to your license string.
 
 ```
@@ -79,7 +79,7 @@ license="your_license"
 Once you have finished all the set up, let's run the script:
 
 ```
-$ ./CanadianGeoData_Downloader.sh
+./CanadianGeoData_Downloader.sh
 ```
 
 ## Contact Us
