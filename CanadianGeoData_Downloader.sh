@@ -7,9 +7,9 @@
 license="your_license"
 
 # Release version
-release_version="latest"  
+release_version="latest"
 
-# Target directory - where you want to download files to; The default is current directory.   
+# Target directory - where you want to download files to; The default is current directory.
 target_directory=$PWD
 
 # Program directory - where you put MelissaUpdater.exe; The default is current directory.
@@ -20,14 +20,14 @@ program_path="$program_directory/MelissaUpdater"
 
 
 ###################### Functions ######################
- 
-Get-File() 
+
+Get-File()
 {
-    path="$target_directory/$6" 
-    
+    path="$target_directory/$6"
+
     verifyPath="$target_directory/$6/$1"
     $program_path verify --path $verifyPath
-    
+
     if [ $? -eq 0 ];
     then
         eval "$program_path file --filename $1 --release_version $release_version --license $license --type $2 --os $3 --compiler $4 --architecture $5 --target_directory $path "
@@ -36,7 +36,7 @@ Get-File()
     fi
 }
 
-Get-Manifest() 
+Get-Manifest()
 {
     path="$target_directory/$2"
 
@@ -51,18 +51,5 @@ Get-Manifest()
 
 # Canadian Geo*Data
 
-# dbf
-target_path="Data/dbf"
-Get-File "canada.dbf" "DATA" "ANY" "ANY" "ANY" $target_path
-
-Get-File "overlay.dbf" "DATA" "ANY" "ANY" "ANY" $target_path
-
-# mdb
-target_path="Data/mdb"
-Get-File "canada.mdb" "DATA" "ANY" "ANY" "ANY" $target_path
-
-# text
-target_path="Data/text"
-Get-File "canada.txt" "DATA" "ANY" "ANY" "ANY" $target_path
-
-Get-File "overlay.txt" "DATA" "ANY" "ANY" "ANY" $target_path
+target_path="Data"
+Get-Manifest "ca_geodata" $target_path
